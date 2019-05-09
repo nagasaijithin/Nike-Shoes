@@ -1,0 +1,523 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Racing Sans One', cursive;
+    background-color: white;
+    margin:0;
+}
+/* =============================================================================================
+                    entry ani mation
+====================================================================================================*/
+.entry{
+    background-color:white;
+}
+.entry img{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    z-index: 2;
+}
+.ani-logo img{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    width: 409px;
+    height: 147px;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+
+/* ===================================================================================
+            navigation stylesheet
+===================================================================================== */
+
+.nav-container .nav-wapper li img{
+  width:65px;
+  height:26px;
+}
+
+.nav-container .nav-wapper .disktop{
+   margin:0;
+   padding:0;
+}
+
+.nav-container .nav-wapper .disktop li{
+    list-style-type:none;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    display: inline-block;
+    padding:20px;
+}
+.nav-wapper .disktop li:nth-child(2) {
+    border-bottom: 2px solid currentColor;
+}
+.nav-wapper .disktop li:nth-child(3):hover {
+    border-bottom: 2px solid currentColor;
+}
+.nav-wapper .disktop li:nth-child(4):hover {
+    border-bottom: 2px solid currentColor;
+}
+.nav-wapper .disktop li:nth-child(5):hover {
+    border-bottom: 2px solid currentColor;
+}
+.nav-container .nav-wapper .disktop a:not(.black){
+    color: black;
+    text-decoration: none;
+    transition:color .3s ease-out;
+}
+.nav-container .nav-wapper .disktop li:nth-child(6){
+    float:right;        
+}
+.nav-container .nav-wapper .disktop li:nth-child(6) a{
+    color:#f0f0f0;
+    background-color:#030107f3;
+    padding:10px 30px;
+    text-decoration: none;                                                                                                                                                                              
+    transition:
+    color .3s ease-in,
+    background-color .3s ease-in; 
+}
+.nav-container .nav-wapper .disktop li:nth-child(6) a:hover{
+    background-color:#f0f0f0;
+    color:#030107f3;
+    transition:
+                color .3s ease-in,
+                background-color .3s ease-in;   
+}
+.nav-container .nav-wapper .disktop a:not(.black):hover{
+    color: #9e9d9d;
+}
+
+.mobilenav {
+    transform:rotate(90deg);
+    font-family:sans-serif;
+    opacity:0;
+    transition: color .3s ease-in;
+}
+.mobilenav:hover{
+    color: #9e9d9d;
+    cursor: pointer;
+}
+
+.mobile-view{
+    display:none;
+}
+.mobile-view ol{
+    padding:20px;
+    background-color: #6e6b6b;
+    box-shadow: inset 0px 0px 5px black;
+}
+.mobile-view li{
+    list-style-type: none;
+    padding-bottom: 8px;
+}
+.mobile-view li a{
+    text-decoration: none;
+    color:white;
+    padding-bottom: 5px;
+    
+}
+.mobile-view li a:hover{
+    border-bottom: 1px solid white;
+}
+
+.backimg{
+    position:absolute;
+    left:40%;
+    top:100%;
+    transform: rotate(-8deg);
+
+}
+.backimg img{
+    z-index: -1;
+    width:70%;
+    height:70%;
+    opacity:.4;
+}
+
+/* =================================================================================================================
+                      main-content stylesheet   
+=========================================================================================================*/
+main{
+    margin:27px;
+    position: relative;
+}
+main .main-wapper .side-one .filter{
+    position: absolute;
+    left: -90px;
+    transform: rotate(-90deg) translatex(-50%);
+    top: 150px;
+    font-size:1.2em;
+}
+
+main .main-wapper .side-one .filter #filter-bar {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    left: 186px;
+    top: 42px;
+    padding:2px 5px;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* =====================================================================
+                   shoecase
+===================================================================*/
+.side-2{
+    margin-left: 20px;
+}
+.side-2-heading{
+    margin:20px;
+}
+.side-2-heading h1{
+    font-size: 38px;
+    margin-left: 33px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.side-2-heading ul{
+    padding-top:0px;
+}
+.side-2-heading ul li a{
+    color:#222222;
+    text-decoration:none;
+    transition: color .3s ease-out;
+}
+.side-2-heading ul li a:hover{
+    color: #9e9d9d;
+}
+.side-2-heading ul li{
+    display:inline-block;
+    padding:0 10px;
+    font-size: 1.2em;
+}
+.shoes {
+    position:relative;
+}
+.shoes img{
+    width:50%;
+}
+.grid-shoes{
+    margin-left: 30px;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+}
+.grid-shocase-shoes{
+ text-transform: capitalize;
+  display:grid;
+  position: relative;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  grid-auto-rows: 500px;
+  grid-gap:5px;
+}
+.ani-shoes {
+    opacity:0;
+    transition: all .5s ease-in;
+}
+.fide-in{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+ #shoes-1 img{
+    margin-left:20%;
+    margin-top:10%;
+  }
+   #shoes-2 img{
+    margin-left:23%;
+    margin-top:19%;
+  }
+   #shoes-3 img{
+    margin-left:20%;
+    margin-top:8%;
+  }
+   #shoes-4 img{
+    margin-left:20%;
+  }
+ 
+   #shoes-5 img{
+    margin-left:20%;
+    margin-top:20%;
+  }
+   #shoes-6 img{
+    margin-left:20%;
+    margin-top:10%;
+  }
+   #shoes-7 img{
+    margin-left:20%;
+    margin-top:11%;
+  }
+   #shoes-8 img{
+    margin-left:20%;
+    margin-top:18%;
+  }
+   #shoes-9 img{
+    margin-left:20%;
+    margin-top:22%;
+  }
+  .shoes .btn-shoes{
+      text-decoration: none;
+      color: black;
+      float: right;
+      margin-right:5px;
+      padding: 5px 15px;
+      transition:border .1s ease-out;
+      border:1px solid white;
+      position: absolute;
+      top: 60%;
+      right: 10%;
+  }
+  .shoes .btn-shoes:hover{
+    border: 1px solid black;
+  } 
+  .shoes .shoes-title{
+    position:absolute;
+    top:50%;
+    left:20%;
+  }
+  .shoes .shoes-title h3{
+    font-size: 18px;
+    margin:0px;
+  }
+  .shoes .shoes-title p{
+    color:#707070;
+    font-size:15px;
+    margin:5px;
+  }
+/* =====================================================================
+                   footer case
+===================================================================*/
+.footer{
+    position: relative;
+}
+.footer-img img{
+    width:100%;
+    height: 60vh;
+    margin:0;
+    padding:0;
+     position: absolute;
+}
+.footer .center{
+   position: relative;
+   opacity:0;
+ 
+}
+.footer ul{
+    list-style-type:none;
+    color: black;
+    display:inline-block;
+    margin: 8% 0 0px 21%;
+   
+}
+.footer ul li{
+    display:inline-block;
+    padding:100px;
+
+}
+.footer ul li i{
+    color: white;
+    font-size:30px;
+    transition: all .3s ease-in;
+}
+.footer ul li i:hover{
+    color:transparent;
+    font-size:30px;
+    background-image: #3A1C71; 
+    background-image: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+
+}
+.footer ul li a{
+    text-decoration: none;
+}
+.up-icons {
+   opacity:1;
+}
+/* =====================================================================
+                   media query 
+===================================================================*/
+
+@media only screen and (max-width:768px){
+    /* iphone disktop stylesheet */
+    .nav-container .nav-wapper .disktop li{
+        padding:20px 15px;
+    }
+    .nav-container .nav-wapper .disktop li:nth-child(6) {
+        display: none;
+        position: absolute;
+    }
+    
+    main .main-wapper .side-one .filter{
+        top: 150px;
+        left: -68px;
+        line-height: 3.6em;
+        font-size:.9em;
+    }
+    main .main-wapper .side-one .filter h1{
+        padding: 5px 0;
+        margin: 0;
+    }
+   
+    main .main-wapper .side-one .filter #filter-bar {
+        left: 136px;
+        top: 24px;
+    }
+    .backimg{
+        display: none;
+    }
+    main{
+        margin:15px;    
+    }
+    .side-2-heading ul li{
+        display:inline-block;
+        padding:0 10px;
+        font-size: 1em;
+    }
+    .side-2-heading ul li:nth-child(3){
+        display:none;
+    }
+    .side-2-heading ul li:nth-child(6){
+        display:none;
+    }
+    .side-2-heading h1{
+        font-size: 28px;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .side-2-heading ul{
+        padding:0px;
+        margin:0px;
+    }
+    .footer ul{
+        display:inline-block;
+        font-size: 20px;
+        margin: 269px 0 0px 100px;
+    }
+    .footer ul li{
+        padding: 74px;
+    }
+      .shoes .shoes-title h3{
+        font-size: 18px;
+      }
+      .shoes .shoes-title{
+        position:absolute;
+        top:70%;
+        left:20%;
+      }
+      .shoes .btn-shoes{
+        position: absolute;
+        top: 70%;
+        right: 10%;
+    }
+}
+
+@media only screen and (max-width:414px){
+    /* ================================================================================================================================
+                                  navigation stylesheet        
+    ================================================================================================================================================ */
+    .nav-container .nav-wapper .disktop li{
+        padding:15px 15px;
+        border: none;
+    }
+    .nav-container .nav-wapper .disktop li:hover{
+        border: none;
+    }
+    .nav-container .nav-wapper .disktop li a{
+        display:none;
+        height:100vh;
+    }
+    .nav-container .nav-wapper .disktop li:nth-child(1) {
+        display:inline-block;
+        position: absolute;
+    }
+    .mobilenav {
+        font-weight: 800;
+        float:right;
+        opacity: 1;
+    }
+ /* ================================================================================================================================
+                                  main-content stylesheet        
+    ================================================================================================================================================ */
+    main .main-wapper .side-one .filter{
+       display:none;
+    }
+    main .main-wapper .side-one .filter #filter-bar {
+        display:none;
+    }
+    main{
+        margin:5px;    
+    }
+    .grid-shocase-shoes{
+         grid-auto-rows: 400px;
+         grid-gap:2px;
+       }
+    .grid-shoes{
+        margin-left: 10px;
+        position: relative;
+    }
+    .side-2{
+        margin-left: 0px;
+    }
+    .side-2-heading ul li{
+        padding:0 5px;
+        font-size: 1em;
+    }
+    .side-2-heading{
+        margin:10px;
+    }
+    .side-2-heading h1{
+        font-size: 28px;
+        margin-left: 0px;
+        margin-top: 27px;   
+        margin-bottom: 0px;
+    }
+    .side-2-heading ul li{
+        display:none;
+    }
+    .side-2-heading ul li:nth-child(1){
+        display:inline-block;
+    }
+    .side-2-heading ul li:nth-child(3){
+        display:inline-block;
+    }
+    .side-2-heading ul li:last-child{
+        display:inline-block;
+    }
+    .shoes img{
+        margin-left:0%;
+    }
+    .footer ul{
+        display:inline-block;
+        font-size: 16px;
+        margin: 8% 0 0px 12%;
+    }
+    .footer ul{
+        display:inline-block;
+        font-size: 17px;
+        margin: 265px 0px 0px 44px;
+    }
+    .footer ul li{
+        padding: 1.3em;
+    }
+      .shoes .shoes-title h3{
+        font-size: 18px;
+      }
+      .shoes .shoes-title{
+        position:absolute;
+        top:50%;
+        left:10%;
+      }
+      .shoes .btn-shoes{
+        position: absolute;
+        top: 60%;
+        right: 9%;
+    }
+    
+}

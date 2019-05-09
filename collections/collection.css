@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Racing Sans One', cursive;
+    background-color: white;
+    margin:0;
+}
+
+/* ===================================================================================
+            navigation stylesheet
+===================================================================================== */
+
+.nav-container .nav-wapper li img{
+    width:65px;
+    height:26px;
+  }
+  
+  .nav-container .nav-wapper .disktop{
+     margin:0;
+     padding:0;
+  }
+  
+  .nav-container .nav-wapper .disktop li{
+      list-style-type:none;
+      font-size: 1.2em;
+      text-transform: capitalize;
+      display: inline-block;
+      padding:20px;
+  }
+  .nav-wapper .disktop li:nth-child(4) {
+      border-bottom: 2px solid currentColor;
+  }
+  .nav-wapper .disktop li:nth-child(2):hover {
+      border-bottom: 2px solid currentColor;
+  }
+  .nav-wapper .disktop li:nth-child(3):hover {
+      border-bottom: 2px solid currentColor;
+  }
+  .nav-wapper .disktop li:nth-child(5):hover {
+      border-bottom: 2px solid currentColor;
+  }
+  .nav-container .nav-wapper .disktop a:not(.black){
+      color: black;
+      text-decoration: none;
+      transition:color .3s ease-out;
+  }
+  .nav-container .nav-wapper .disktop li:nth-child(6){
+      float:right;        
+  }
+  .nav-container .nav-wapper .disktop li:nth-child(6) a{
+      color:#f0f0f0;
+      background-color:#030107f3;
+      padding:10px 30px;
+      text-decoration: none;                                                                                                                                                                              
+      transition:
+      color .3s ease-in,
+      background-color .3s ease-in; 
+  }
+  .nav-container .nav-wapper .disktop li:nth-child(6) a:hover{
+      background-color:#f0f0f0;
+      color:#030107f3;
+      transition:
+                  color .3s ease-in,
+                  background-color .3s ease-in;   
+  }
+  .nav-container .nav-wapper .disktop a:not(.black):hover{
+      color: #9e9d9d;
+  }
+  
+  .mobilenav {
+      transform:rotate(90deg);
+      font-family:sans-serif;
+      opacity:0;
+      transition: color .3s ease-in;
+  }
+  .mobilenav:hover{
+      color: #9e9d9d;
+      cursor: pointer;
+  }
+  
+  .mobile-view{
+      display:none;
+  }
+  .mobile-view ol{
+      padding:20px;
+      background-color: #6e6b6b;
+      box-shadow: inset 0px 0px 5px black;
+  }
+  .mobile-view li{
+      list-style-type: none;
+      padding-bottom: 8px;
+  }
+  .mobile-view li a{
+      text-decoration: none;
+      color:white;
+      padding-bottom: 5px;
+      
+  }
+  .mobile-view li a:hover{
+      border-bottom: 1px solid white;
+  }
+  
+/* =====================================================================
+                   shoocase
+===================================================================*/ 
+.container {
+    margin-top:20px;
+}
+
+.container #hero-img img{
+    width:100%;
+    height:100vh;
+    margin-bottom:20px;
+}
+.grid-one{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-auto-rows: 50%;
+    
+}
+.grid-one #second-img img{ width:100%; height:80vh; }
+.grid-one #three-img img{ width:100%; height:80vh;}
+#four-img img{width:100%;}
+.grid-two {
+    display: grid;
+    grid-gap: 15px ;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+.grid-two-img img{ width:400px; height:100vh; margin: 20px;}
+#eight-img img{width:100%; height:100vh;}
+
+.grid-three {
+    display:grid;
+    grid-template-areas: 
+            ". a a a a a b b b b b b"
+            ". a a a a a b b b b b b"
+            ". a a a a a b b b b b b"
+            ". a a a a a b b b b b b";
+    justify-content: center;
+    align-items: start;
+}
+#nine-img{
+    margin: 20px;
+}
+#ten-img{
+    margin:20px;
+}
+#nine-img img{
+    width: 100%;
+    height: 100vh;
+    grid-area: a;
+}
+
+#ten-img img{
+    width: 100%;
+    height: 100vh;
+    grid-area: b;
+}
+#footer-img img{
+    width:100%;
+    height:100vh;
+}
+img{
+    -webkit-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    filter: grayscale(50%);
+}
+img:hover{
+    -webkit-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+
+/* =====================================================================
+                   media query 
+===================================================================*/
+@media only screen and (max-width:768px){
+    /* iphone disktop stylesheet */
+    .nav-container .nav-wapper .disktop li{
+        padding:20px 15px;
+    }
+    .nav-container .nav-wapper .disktop li:nth-child(6) {
+        display: none;
+        position: absolute;
+    }
+    .grid-two-img img{ width:250px; height:80vh; margin: 10px;}
+    
+}
+
+
+@media only screen and (max-width:414px){
+    /* ================================================================================================================================
+                                  navigation stylesheet        
+    ================================================================================================================================================ */
+    .nav-container .nav-wapper .disktop li{
+        padding:15px 15px;
+        border: none;
+    }
+    .nav-container .nav-wapper .disktop li:hover{
+        border: none;
+    }
+    .nav-container .nav-wapper .disktop li a{
+        display:none;
+        height:100vh;
+    }
+    .nav-container .nav-wapper .disktop li:nth-child(1) {
+        display:inline-block;
+        position: absolute;
+    }
+    .mobilenav {
+        font-weight: 800;
+        float:right;
+        opacity: 1;
+    }
+    .grid-two-img img{ margin: 0px; width:376px;}
+    
+.grid-three {
+    display:block;
+}
+}
